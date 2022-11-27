@@ -11,6 +11,7 @@ var how_array: PoolStringArray
 func _ready() -> void:
 	what_array = _load_file(WHAT_FILE_NAME)
 	how_array = _load_file(HOW_FILE_NAME)
+	randomize()
 
 
 func _load_file(file_name: String) -> PoolStringArray:
