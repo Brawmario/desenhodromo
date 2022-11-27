@@ -81,7 +81,7 @@ text = "Novo \"Como\" aleatório"
 
 [node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
 margin_top = 682.0
-margin_right = 3.0
+margin_right = 480.0
 margin_bottom = 686.0
 
 [node name="WhatHowButton" type="Button" parent="VBoxContainer"]
