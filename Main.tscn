@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Roboto-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://LabelFont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Main.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -12,6 +13,7 @@ font_data = ExtResource( 1 )
 [node name="Main" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 3 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_right = 480.0
@@ -35,6 +37,7 @@ align = 1
 autowrap = true
 
 [node name="WhatTextEdit" type="TextEdit" parent="VBoxContainer"]
+unique_name_in_owner = true
 margin_top = 68.0
 margin_right = 480.0
 margin_bottom = 323.0
@@ -60,6 +63,7 @@ align = 1
 autowrap = true
 
 [node name="HowTextEdit" type="TextEdit" parent="VBoxContainer"]
+unique_name_in_owner = true
 margin_top = 389.0
 margin_right = 480.0
 margin_bottom = 644.0
@@ -86,3 +90,7 @@ margin_right = 480.0
 margin_bottom = 720.0
 custom_fonts/font = ExtResource( 2 )
 text = "Novo \"O que\" e \"Como\" aleatórios"
+
+[connection signal="pressed" from="VBoxContainer/WhatButton" to="." method="_on_WhatButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/HowButton" to="." method="_on_HowButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/WhatHowButton" to="." method="_on_WhatHowButton_pressed"]
